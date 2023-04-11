@@ -4,7 +4,7 @@ import { Autocomplete, TextField } from "@mui/material";
 import { Box } from "@mui/system";
 
 export default function Country(props) {
-    const {selectCountry, setSelectCountry} = props; 
+  const { selectCountry, setSelectCountry } = props;
   /* const [selectCountry, setSelectCountry] = useState('') */
   const [error, setError] = useState(null);
   const [items, setItems] = useState([]);
@@ -23,14 +23,22 @@ export default function Country(props) {
     return <p>{error.message}, Error 404</p>;
   } else {
     return (
-      <Box sx={{ width: 200 }}>
+      <Box sx={{ width: 302 }}>
         <Autocomplete
+          style={{ width: 302 }}
           onChange={(event, value) => setSelectCountry(value)}
-          options={data.sort((a, b) => {
-            return a.name > b.name
-        }).map((option) => option.name)}
+          options={data
+            .sort((a, b) => {
+              return a.name > b.name;
+            })
+            .map((option) => option.name)}
           renderInput={(params) => (
-            <TextField fullWidth={false} {...params} label="Country" value={selectCountry} />
+            <TextField
+              fullWidth={false}
+              {...params}
+              label="Country"
+              value={selectCountry}
+            />
           )}
         />
       </Box>

@@ -43,8 +43,10 @@ export default function CreateTripList(props) {
 
   useEffect(() => {
     window.addEventListener("popstate", popStateListener);
-return () => { window.addEventListener("popstate", popStateListener);}
-  })
+    return () => {
+      window.addEventListener("popstate", popStateListener);
+    };
+  });
 
   return (
     <div
@@ -56,24 +58,51 @@ return () => { window.addEventListener("popstate", popStateListener);}
         gap: 5,
       }}
     >
-      <Button
-        onClick={() => {
-          navigate("/");
-        }}
-      >
-        {" "}
-        Home <HomeIcon />{" "}
-      </Button>
-      <Season setSelectSeason={setSelectSeason} />
-      <TransportList
-        transportName={transportName}
-        setTransportName={setTransportName}
-      />
-      <CalendarDate selectDate={selectDate} setSelectDate={setSelectDate} />
-      <Country
-        selectCountry={selectCountry}
-        setSelectCountry={setSelectCountry}
-      />
+      <div style={{ display: "flex", color: "blue" }}>
+        <Button
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          <HomeIcon />
+        </Button>
+        <p style={{ textAlign: "center" }}> Checklist options</p>
+      </div>
+
+      <div style={{ display: "flex" }}>
+        <div>
+          <div style={{ display: "flex" }}>
+            <span style={{ width: "50%" }}>1.Season </span>
+            <Season setSelectSeason={setSelectSeason} />
+          </div>
+
+          <div style={{ display: "flex", gap: 31 }}>
+            <span style={{ width: "50%" }}>2.Transport </span>
+            <TransportList
+              style={{ width: "50%" }}
+              transportName={transportName}
+              setTransportName={setTransportName}
+            />
+          </div>
+
+          <div style={{ display: "flex" }}>
+            <span style={{ width: "50%" }}> 3.Trip date </span>
+            <CalendarDate
+              selectDate={selectDate}
+              setSelectDate={setSelectDate}
+            />
+          </div>
+
+          <div style={{ display: "flex" }}>
+            <span style={{ width: "50%" }}> 4.Destination</span>
+            <Country
+              selectCountry={selectCountry}
+              setSelectCountry={setSelectCountry}
+            />
+          </div>
+        </div>
+      </div>
+
       <Save
         select={select}
         setSelectSeason={setSelectSeason}
@@ -86,7 +115,7 @@ return () => { window.addEventListener("popstate", popStateListener);}
         selectDate={selectDate}
       />
 
-      {select.length || <Modal />}
+      {/* {select.length || <Modal />} */}
     </div>
   );
 }
