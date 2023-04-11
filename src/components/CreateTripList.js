@@ -86,20 +86,22 @@ export default function CreateTripList(props) {
           </div>
 
           <div style={{ display: "flex" }}>
-            <span style={{ width: "50%" }}> 3.Trip date </span>
+            <span style={{ width: "50%" }}> 3.Destination</span>
+            <Country
+              selectCountry={selectCountry}
+              setSelectCountry={setSelectCountry}
+            />
+          </div>
+          
+          <div style={{ display: "flex" }}>
+            <span style={{ width: "50%" }}> 4.Trip date </span>
             <CalendarDate
               selectDate={selectDate}
               setSelectDate={setSelectDate}
             />
           </div>
 
-          <div style={{ display: "flex" }}>
-            <span style={{ width: "50%" }}> 4.Destination</span>
-            <Country
-              selectCountry={selectCountry}
-              setSelectCountry={setSelectCountry}
-            />
-          </div>
+          
         </div>
       </div>
 

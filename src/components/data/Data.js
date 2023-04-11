@@ -22,10 +22,10 @@ const CalendarDate = ({ selectDate, setSelectDate }) => {
 
     return (
         <div>
-            <button onClick={() => setIsOpen(!isOpen)}>
+         {/*    <button onClick={() => setIsOpen(!isOpen)}>
                 {isOpen ? 'Close Calendar' : 'Open Calendar'}
-            </button>
-            {isOpen && (
+            </button> */}
+           {/*  {isOpen && ( */}
                 <div style={{ width: '300px' }}>
                     <DateRangePicker
                         ranges={[initialState]}
@@ -40,7 +40,7 @@ const CalendarDate = ({ selectDate, setSelectDate }) => {
                         }}
                     />
                 </div>
-            )}
+           {/*  )} */}
         </div>
     );
 };

@@ -23,9 +23,9 @@ export default function Country(props) {
     return <p>{error.message}, Error 404</p>;
   } else {
     return (
-      <Box sx={{ width: 302 }}>
+      <Box sx={{ width: 307 }}>
         <Autocomplete
-          style={{ width: 302 }}
+          style={{ width: 307 }} 
           onChange={(event, value) => setSelectCountry(value)}
           options={data
             .sort((a, b) => {
@@ -40,7 +40,7 @@ export default function Country(props) {
               value={selectCountry}
             />
           )}
-        />
+        /> 
       </Box>
     );
   }

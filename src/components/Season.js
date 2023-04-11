@@ -24,7 +24,7 @@ export default function Season(props) {
         onChange={(e) => {
           setSelectSeason(e.target.value);
         }}
-      >
+      > 
         {seasons.map((season) => (
           <MenuItem key={uuid()} value={season}>
             {season}
