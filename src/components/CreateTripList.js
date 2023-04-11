@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Country from "./country/Country";
-import Date from "./data/Data";
+import CalendarDate from "./data/Data";
 import Save from "./Save";
 import Season from "./Season";
 import TransportList from "./transport/TransportList";
 import { useNavigate } from "react-router";
 import { useLocation } from "react-router";
-import HomeIcon from "@mui/icons-material/Home"; 
+import HomeIcon from "@mui/icons-material/Home";
 import { Button } from "@mui/material";
 import Modal from "./Modal";
 import { useEffect } from "react";
@@ -69,7 +69,7 @@ return () => { window.addEventListener("popstate", popStateListener);}
         transportName={transportName}
         setTransportName={setTransportName}
       />
-      <Date selectDate={selectDate} setSelectDate={setSelectDate} />
+      <CalendarDate selectDate={selectDate} setSelectDate={setSelectDate} />
       <Country
         selectCountry={selectCountry}
         setSelectCountry={setSelectCountry}

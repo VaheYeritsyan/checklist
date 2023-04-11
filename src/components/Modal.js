@@ -10,7 +10,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 export default function Modal() {
   const [open, setOpen] = React.useState(false);
 
-  const handleClickOpen = () => { 
+  const handleClickOpen = () => {
     setOpen(true);
   };
 
@@ -20,9 +20,9 @@ export default function Modal() {
 
   return (
     <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Slide in alert dialog
-      </Button>
+      {/*<Button variant="outlined" onClick={handleClickOpen}>*/}
+      {/*  Slide in alert dialog*/}
+      {/*</Button>*/}
       <Dialog
         open={open}
         keepMounted

@@ -10,7 +10,7 @@ export default function Season(props) {
   return (
     <Box
       component="form"
-      sx={{ 
+      sx={{
         '& .MuiTextField-root': { m: 1, width: '25ch' },
       }}
       noValidate
@@ -20,7 +20,6 @@ export default function Season(props) {
           select
           label="Season"
           defaultValue=''
-          helperText="Please select your currency"
           onChange={(e) => {
               setSelectSeason(e.target.value)
           }}
