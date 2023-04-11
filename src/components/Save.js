@@ -9,12 +9,12 @@ export default function Save(props) {
     const [success, setSuccess] = useState(false)
     const navigate = useNavigate()
 
-    const disabled = !select.length || !transportName.length || !selectCountry || !selectDate[0] || !selectDate[1]
+    const disabled = !select.length || !transportName.length || !selectCountry || !selectDate.startDate || !selectDate.endDate
     const onSave = async() => {
         await setNewTrip([...newTrip, {season: select, transportName: transportName, selectCountry: selectCountry, time: selectDate}])
         await setSuccess(true)
-       await setTimeout(() => {  
-          navigate('/')  
+       await setTimeout(() => {
+          navigate('/')
           setSelectSeason('')
           setTransportName([])
           setSelectCountry('')
