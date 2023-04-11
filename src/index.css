@@ -14,3 +14,34 @@ code {
 .rdrDefinedRangesWrapper{
   display: none;
 }
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.item.red {
+  background-color: red;
+}
+
+.item.yellow {
+  background-color: yellow;
+}
+
+.item.blue {
+  background-color: blue;
+}
+.checklist {
+  display: flex;
+  margin: auto;
+  text-align: left;
+  justify-content: center;
+}
+
+.checklist ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.checklist li {
+  margin-bottom: 5px;
+}
